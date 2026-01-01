@@ -1,3 +1,7 @@
+# Welcome to My Blog
+
+Here I'll be posting about [TOPIC]
+
 # Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
