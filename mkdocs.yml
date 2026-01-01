@@ -59,7 +59,6 @@ plugins:
         python:
           options:
             docstring_style: sphinx
-  - blog
   - minify:
       minify_html: true
 
