@@ -39,4 +39,19 @@ Working with Linux Mint, I spent an embarrassingly long time trying to capture t
 
 - As said previously, know what information is available to you, once you are accepted, you will probably get a google drive containing all the necessary resources
 - Choose atmost 2 subsystems you want to contribute to, the kernel itself is quite large, it's important to know what you want to focus on.
-- keep a track of the process used to find bugs, 
+- keep a track of the process used to find bugs, as well as any tests performed (tests are necessary in case of any/all logical changes(i.e. code changes))
+- run checkpatch --strict before sending patches.
+- LFX mentorship is a one time opportunity, you can only ever be in 1 mentorship; can't join another one even after the current one is completed.
+- "meaningless patches" don't count, examples of such patches are translation from one dialect of english to another, or spell fixes.
+- All other patches directed towards the kernel count, even those submitted before the mentorship started (well, i guess there should be a limit to how old of a contribution counts, but atleast those patches you sent when completing the pre-requisite tasks count).
+- Use imperative tone in the patches ( i am aware this is mentioned in the pre-requisite course, but still an important reminder)
+- If you lack the necessary conditions (such as missing hardware) for testing, then it's suggested to not attempt that specific problem.
+- Learn how to write good commit messages, try to focus on "what is fixed" and "why is it fixed in this way and not some other way" instead of "what was changed in the code".
+
+## Choices available
+
+ As stated above, It is suggested to choose the subsystems you want to contribute to, you can refer the subsystem APIs kernel doc page to know what part you want to contribute to. When working with code in the kernel, you need to be quite careful as any change you make will (if accepted) eventually be rolled out to millions of devices. As such, a very rigorous amount of testing is needed for code changes. I considered the time I had on hand while balancing academic exams, interviews, etc and ended up choosing to contribute to the Documentation for now, and planning to return to the coding parts once I have the time. Fortunately for me, The kernel included some very useful scripts. I initially started contributing by using readily available spellcheck tools to detect spelling errors and sending spell fix patches, although they don't count, they did help me familiarize myself with sending patches.
+
+ I then used 'make refcheckdocs' in order to find various dead links. Once found, I checked the lore to find the exact commit that introduced the issue (it's commit hash should be referenced when submitting the patch), this usually helps me find the correct link as well, as in most cases, the files are renamed/moved instead of being removed completely. It's a fairly simple fix after that, but such fixes are quite rare. It's better to focus on code patches, I plan on starting work on them after my exams, fortunately for me, having storage-related kernel programming experience will be helpful to my internship later in summer 2026, so I have an idea of what to focus on. I will update more info on this blog once I start. Currently, the status of my patches is as follows:
+
+ 
