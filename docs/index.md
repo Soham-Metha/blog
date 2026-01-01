@@ -54,4 +54,12 @@ Working with Linux Mint, I spent an embarrassingly long time trying to capture t
 
  I then used 'make refcheckdocs' in order to find various dead links. Once found, I checked the lore to find the exact commit that introduced the issue (it's commit hash should be referenced when submitting the patch), this usually helps me find the correct link as well, as in most cases, the files are renamed/moved instead of being removed completely. It's a fairly simple fix after that, but such fixes are quite rare. It's better to focus on code patches, I plan on starting work on them after my exams, fortunately for me, having storage-related kernel programming experience will be helpful to my internship later in summer 2026, so I have an idea of what to focus on. I will update more info on this blog once I start. Currently, the status of my patches is as follows:
 
- 
+ 3 spell fix patches applied to the main branch
+ 3 spell fix patches that have been reviewed/acked but not applied
+ 6 spell fix patches that have had a duplicate patch merged already
+ 3 spell fix patches without any response
+
+ 2 patches applied, one in linux-next and another in 
+ 4 patches to be reviewed
+ 1 patch which has a duplicate patch merged
+ 1 incorrect patch
