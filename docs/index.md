@@ -2,27 +2,51 @@
 
 ## Background and trajectory
 
-I initially started programming when I was about to finish high school. Thanks to COVID, I suddenly had a lot of free time, and I ended up using it to build a simple chatbot (not the AI chatbots as we know them today; this was before ChatGPT) for moderation and entertainment commands on Discord. By the time COVID was over, I had started my Diploma in Computer Technology, where I explored a wide range of topics and spent the next 2~3 years learning game development. This helped me build a solid understanding of OOP, graphics programming, event handling, and related concepts.
+!!! quote ""
 
-I was introduced to operating systems fairly late, during the final (3rd) year of my diploma, around the same time I picked up an elective in advanced computer networking. I completed my diploma in 2024 with the honor of being a gold medalist (the Indian equivalent of a valedictorian; ranked 1st across my college for the duration of the diploma) and ranked within the top 100 graduates across the state.
+<span class="sidenote">
+    <span class="side-id">1.</span> not the AI chatbots as we know them today; this was before ChatGPT
+</span>
+I initially started programming when I was about to finish high school. Thanks to COVID, I suddenly had a lot of free time, and I ended up using it to build a simple chatbot<sup class="side-ref">1</sup> for moderation and entertainment commands on Discord. By the time COVID was over, I had started my Diploma in Computer Technology, where I explored a wide range of topics and spent the next 2~3 years learning game development. This helped me build a solid understanding of OOP, graphics programming, event handling, and related concepts.
+
+<span class="sidenote">
+    <span class="side-id">2.</span> the Indian equivalent of a valedictorian; ranked 1st across my college for the duration of the diploma
+</span>
+I was introduced to operating systems fairly late, during the final (3rd) year of my diploma, around the same time I picked up an elective in advanced computer networking. I completed my diploma in 2024 with the honor of being a gold medalist<sup class="side-ref">2</sup> and ranked within the top 100 graduates across the state.
 
 Following this, I began my undergraduate studies at Pune Institute of Computer Technology in the same year. The college has several active student-led organizations and clubs, and I've been actively involved in the Game Dev Community and the ACM Student Chapter. Around this time, however, I realized that while I enjoyed game development, it was more of a hobby than a long-term career option. I wanted to work in a domain that genuinely interested me.
 
-I began exploring different areas and, by early 2025, arrived at systems programming. I spent the last four months of my second year of undergrad building a platform-independent assembler with my own ISA, which gradually evolved into something resembling a primitive, stack-based version of LLVM. This eventually led to a conference paper that was published in IEEE, and I'll be presenting it at the ICEI conference on January 9, 2026.
+<span class="sidenote">
+    <span class="side-id">3.</span> [VIREX](https://virex.readthedocs.io/)<br>
+    <span class="side-id">4.</span> will update the link here after the conference
+</span>
+I began exploring different areas and, by early 2025, arrived at systems programming. I spent the last four months of my second year of undergrad building a platform-independent assembler with my own ISA<sup class="side-ref">3</sup>, which gradually evolved into something resembling a primitive, stack-based version of LLVM. This eventually led to a conference paper that was published in IEEE<sup class="side-ref">4</sup>, and I'll be presenting it at the ICEI conference on January 9, 2026.
 
-Because of this growing interest, I also started becoming more active in compiler and open-source communities. I recently built a compiler on top of the same project as part of a week-long hackathon organized by IICT (Innovations in Compiler Technology), Bengaluru. When I first joined the college, its Open Source Community was still in a very early stage (it has recently crossed 800 members!). The community has several active members who regularly share news, updates, and opportunities in the open-source space. LKMP was one such opportunity that I discovered through them.
+<span class="sidenote">
+    <span class="side-id">5.</span> specifically, Innovations in Compiler Technology (IICT) and PICT Open Source Community<br>
+    <span class="side-id">6.</span> [unnamed](https://github.com/Soham-Metha/IICT_SEGFAULT_2025)
+</span>
+Because of this growing interest, I also started becoming more active in compiler and open-source communities<sup class="side-ref">5</sup>. I recently built a compiler<sup class="side-ref">6</sup> on top of the same project as part of a week-long hackathon organized by IICT (Innovations in Compiler Technology), Bengaluru. When I first joined the college, its Open Source Community was still in a very early stage (it has recently crossed 800 members!). The community has several active members who regularly share news, updates, and opportunities in the open-source space. LKMP was one such opportunity that I discovered through them.
 
 ## Finding Direction
 
+!!! quote ""
+
 Having just completed a fairly large project and entering my third year, I found myself in a familiar in-between phase: trying to figure out what to build next, and more importantly, what direction I actually wanted to commit to.
 
-At the time, I was already experimenting with low-level systems work on my own. I had started setting up a toy operating system, cross-compilation, multiboot headers, printing a simple “Hello, World” in text mode, then moving on to graphics mode, the usual early steps. It was interesting work.
+<span class="sidenote">
+    <span class="side-id">7.</span> [REX-OS](https://github.com/Soham-Metha/REX-OS)
+</span>
+At the time, I was already experimenting with low-level systems work on my own. I had started setting up a toy operating system<sup class="side-ref">7</sup>, cross-compilation, multiboot headers, printing a simple “Hello, World” in text mode, then moving on to graphics mode, the usual early steps. It was interesting work.
 
-Around the same time, I began becoming more active within the PICT Open Source Community. I listed my project under GirlScript Summer of Code and acted as a project admin there from August to November 2025. In July 2025, the community conducted an “Intro to Open Source Programs” session, where I first learned about LKMP.
+Around the same time, I began becoming more active within the PICT Open Source Community. I listed my assembler project under GirlScript Summer of Code and acted as a project admin there from August to November 2025. In July 2025, the community conducted an “Intro to Open Source Programs” session, where I first learned about LKMP.
 
 Compared to building something isolated and self-contained on my own, this felt like an opportunity to learn from a real, production-grade codebase with real workflows and expectations. I thought of it as a learning opportunity, one that could naturally complement what I was already studying and experimenting with.
 
-Prior to this, I had little to no experience working on community-organized projects, especially at this scale. I'd strongly suggest spending time on the suggested course, particularly to understand how patches are submitted and accepted, and how the community functions overall. It contained several extremely useful guidelines that I've found myself referring back to while submitting patches.
+<span class="sidenote">
+    <span class="side-id">8.</span> LFD103
+</span>
+Prior to this, I had little to no experience working on community-organized projects, especially at this scale. I'd strongly suggest spending time on the suggested course<sup class="side-ref">8</sup>, particularly to understand how patches are submitted and accepted, and how the community functions overall. It contained several extremely useful guidelines that I've found myself referring back to while submitting patches.
 
 While completing the prerequisite tasks, I decided to properly organize what I had done and the problems I faced. I won't be sharing what I submitted (do it yourself :D), but some of the issues I ran into are worth mentioning.
 
@@ -30,11 +54,14 @@ While completing the prerequisite tasks, I decided to properly organize what I h
 
 The first time I used Syzkaller was to run `decode_stacktrace.sh` on [this report](https://syzkaller.appspot.com/bug?extid=240906f6485cdb6035a7). The task itself wasn't particularly difficult, but I ended up wasting time recompiling the kernel. In hindsight, it would have been much better to simply use the files that were already provided in the report.
 
-Seriously, **know what information is available to you, and work with it.**
+Seriously, **know what information is available to you and how to work with it.**
 
 ### Working with VirtualBox
 
-One simple but annoying issue I faced with VirtualBox was that the recompiled kernel booted successfully… but didn't accept any mouse input, and VirtualBox kept showing an error message (specifically, "The VirtualBox kernel service is not running.").
+<span class="sidenote">
+    <span class="side-id">9.</span> specifically, "The VirtualBox kernel service is not running."
+</span>
+One simple but annoying issue I faced with VirtualBox was that the recompiled kernel booted successfully… but didn't accept any mouse input, and VirtualBox kept showing an error message<sup class="side-ref">9</sup>.
 
 After some digging, I found out that the essential VirtualBox modules weren't enabled in the kernel config. If you're working with VirtualBox, don't forget to set the following options to `m`:
 
@@ -52,9 +79,11 @@ After a bit of debugging (okay, maybe a few hours), I realized this was entirely
 
 While working on Linux Mint, I spent an embarrassingly long time trying to capture kernel panic logs. After a lot of head-scratching, I finally came across [this discussion](https://forum.linuxfoundation.org/discussion/868772/how-to-capture-the-panic-message) on the LFX Mentorship forum.
 
-Moral of the story: **refer to the forum if you're facing an issue, chances are, someone else already has** (insert apes_together_strong.jpg).
+Moral of the story: **refer to the forum. If you're facing an issue, chances are, someone else already has** (insert apes_together_strong.jpg).
 
 ## Office Hours
+
+!!! quote ""
 
 The program runs in both summer and fall, and is led by Shuah Khan along with one or more co-mentors. For the summer cohort, you can choose between a part-time, six-month option or a full-time, three-month option. For the fall cohort, however, it's strictly full-time.
 
@@ -63,7 +92,7 @@ The program itself is fairly hands-off, with a weekly one-hour guidance and doub
 - As mentioned earlier, know what information is available to you. Once accepted, you'll likely get access to a Google Drive with all the necessary resources.
 - Choose at most two subsystems to contribute to. The kernel is huge, and it's important to narrow your focus.
 - Keep track of the process you use to find bugs, along with any tests you run (tests are necessary for any logical changes, i.e., code changes).
-- Run `checkpatch --strict` before sending patches.
+- Run `checkpatch --strict` before sending patches to identify any issues with the patch.
 - LFX mentorship is a one-time opportunity; you can only participate in one mentorship and can't join another after completing it.
 - "Meaningless patches" don't count. Examples include translating between dialects of English or simple spell fixes.
 - All other kernel-directed patches count, even those sent before the mentorship officially starts (there's probably a limit to how old a contribution can be, but patches sent during prerequisite tasks do count).
@@ -73,22 +102,49 @@ The program itself is fairly hands-off, with a weekly one-hour guidance and doub
 
 ## Choices
 
+!!! quote ""
+
 As mentioned above, it's recommended to choose the subsystems you want to contribute to. You can refer to the subsystem APIs section in the kernel documentation to decide which areas interest you. When working with kernel code, you need to be careful, any accepted change will eventually be rolled out to millions of devices. As a result, code changes require a very rigorous level of testing.
 
-Considering the time I had available while balancing academic exams, interviews, and other commitments, I decided to contribute to documentation for now, with plans to return to code contributions once I have more time. Fortunately, the kernel provides several useful scripts to help with this (Documentation Patches). I initially started by using available spellcheck tools to detect spelling errors and sending spell-fix patches. While these don't count toward the mentorship, they did help me get comfortable with the patch submission process.
+Considering the time I had available while balancing academic exams, interviews, and other commitments, I decided to contribute to documentation for now, with plans to return to code contributions once I have more time. Fortunately, the kernel provides several useful scripts to help with the Documentation Patches. I initially started by using available spellcheck tools to detect spelling errors and sending spell-fix patches. While these don't count toward the mentorship, they did help me get comfortable with the patch submission process.
 
 I later used `make refcheckdocs` to find dead links in the documentation. Once I found one, I checked lore to identify the exact commit that introduced the issue (the commit hash should be referenced when submitting the patch). This often helped me locate the correct link, since in most cases files are renamed or moved rather than deleted outright. The fix itself is usually straightforward, but such issues aren't very common.
 
-In the long run, it makes more sense to focus on code patches. I plan to start working on those after my exams. Fortunately, gaining experience in storage-related kernel programming should be helpful for my internship in the summer of 2026, so I already have a rough idea of what I want to focus on. I’ll update this blog once I get started.
+In the long run, it makes more sense to focus on code patches. I plan to start working on those after my exams. Fortunately for me, gaining experience in storage-related kernel programming should be helpful for my internship in the summer of 2026, so I already have a rough idea of what I want to focus on. I’ll update this blog once I get started.
 
 ## Current patch status
+
+!!! quote ""
+
+### Documentation Patches
+
+- 2 patches applied (one in `linux-next` and another in `docs-next`)
+- 4 patches pending review
+- 1 patch where a duplicate was merged
+- 1 incorrect patch
+
+### Spell-fix
 
 - 3 spell-fix patches applied to the main branch
 - 3 spell-fix patches reviewed/acked but not yet applied
 - 6 spell-fix patches where a duplicate patch was already merged
 - 3 spell-fix patches with no response
-- -
-- 2 patches applied (one in `linux-next` and another in `docs-next`)
-- 4 patches pending review
-- 1 patch where a duplicate was merged
-- 1 incorrect patch
+
+[Detailed description available here]()
+
+## A Note of Thanks
+
+!!! quote ""
+
+I’d like to thank **LFX** for organizing and running the **Linux Kernel Mentorship Program**, and for making an entry point into kernel development more approachable for students and early contributors.
+
+I’m also grateful to **Shuah Khan**, the **co-mentors**, and everyone involved in running the weekly sessions for their guidance and patience. Beyond that, thanks to all the **reviewers** and **maintainers** who took the time to read patches, point out mistakes, and explain why things should be done a certain way. Even brief reviews were learning experiences in themselves.
+
+This program helped demystify a lot of how kernel development actually works, and while I didn’t make as much progress as I initially hoped, it gave me a foundation I plan to build on going forward.
+
+## Profiles
+
+!!! quote ""
+
+- [Github](https://github.com/Soham-Metha)
+- [Linkedin](https://www.linkedin.com/in/soham-metha)
