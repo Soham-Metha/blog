@@ -59,7 +59,7 @@ Working with Linux Mint, I spent an embarrassingly long time trying to capture t
  6 spell fix patches that have had a duplicate patch merged already
  3 spell fix patches without any response
 
- 2 patches applied, one in linux-next and another in 
+ 2 patches applied, one in linux-next and another in
  4 patches to be reviewed
  1 patch which has a duplicate patch merged
  1 incorrect patch
