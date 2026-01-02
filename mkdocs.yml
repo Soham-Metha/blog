@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Soham's Blog
 site_dir: ./html
 
 theme:
@@ -46,7 +46,7 @@ theme:
         icon: material/lightbulb
         name: Switch to dark mode
   font:
-    text: Lora
+    text: Merriweather
     code: EnvyCodeR Nerd Font Mono
   favicon: assets/placeholder-favicon.png
   icon:
