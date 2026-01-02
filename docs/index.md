@@ -1,8 +1,8 @@
 # The Linux Kernel Mentorship Program (LKMP)
 
-## Background and trajectory
+## 1. Background and trajectory
 
-!!! quote ""
+!!! note ""
 
 <span class="sidenote">
     <span class="side-id">1.</span> not the AI chatbots as we know them today; this was before ChatGPT
@@ -24,13 +24,13 @@ I began exploring different areas and, by early 2025, arrived at systems program
 
 <span class="sidenote">
     <span class="side-id">5.</span> specifically, Innovations in Compiler Technology (IICT) and PICT Open Source Community<br>
-    <span class="side-id">6.</span> [unnamed](https://github.com/Soham-Metha/IICT_SEGFAULT_2025)
+    <span class="side-id">6.</span> [unnamed compiler](https://github.com/Soham-Metha/IICT_SEGFAULT_2025)
 </span>
 Because of this growing interest, I also started becoming more active in compiler and open-source communities<sup class="side-ref">5</sup>. I recently built a compiler<sup class="side-ref">6</sup> on top of the same project as part of a week-long hackathon organized by IICT (Innovations in Compiler Technology), Bengaluru. When I first joined the college, its Open Source Community was still in a very early stage (it has recently crossed 800 members!). The community has several active members who regularly share news, updates, and opportunities in the open-source space. LKMP was one such opportunity that I discovered through them.
 
-## Finding Direction
+## 2. Finding Direction
 
-!!! quote ""
+!!! note ""
 
 Having just completed a fairly large project and entering my third year, I found myself in a familiar in-between phase: trying to figure out what to build next, and more importantly, what direction I actually wanted to commit to.
 
@@ -50,13 +50,17 @@ Prior to this, I had little to no experience working on community-organized proj
 
 While completing the prerequisite tasks, I decided to properly organize what I had done and the problems I faced. I won't be sharing what I submitted (do it yourself :D), but some of the issues I ran into are worth mentioning.
 
-### Working with Syzkaller
+### 2.1. Working with Syzkaller
+
+!!! quote ""
 
 The first time I used Syzkaller was to run `decode_stacktrace.sh` on [this report](https://syzkaller.appspot.com/bug?extid=240906f6485cdb6035a7). The task itself wasn't particularly difficult, but I ended up wasting time recompiling the kernel. In hindsight, it would have been much better to simply use the files that were already provided in the report.
 
 Seriously, **know what information is available to you and how to work with it.**
 
-### Working with VirtualBox
+### 2.2. Working with VirtualBox
+
+!!! quote ""
 
 <span class="sidenote">
     <span class="side-id">9.</span> specifically, "The VirtualBox kernel service is not running."
@@ -69,21 +73,25 @@ After some digging, I found out that the essential VirtualBox modules weren't en
 - `CONFIG_VBOXGUEST`
 - `CONFIG_VBOXSF_FS`
 
-### Working with printk
+### 2.3. Working with printk
+
+!!! quote ""
 
 At one point, I was trying to print messages when loading and unloading kernel modules of my own creation, but I ran into a very strange issue. The messages appeared in reverse order: "Bye!" was printed on module insertion, and "Hello, World!" showed up on module removal.
 
 After a bit of debugging (okay, maybe a few hours), I realized this was entirely on me. I didn't fully understand the functions I was calling, and a missing `\n` at the end of the message caused the log buffer to flush incorrectly. So yes, **know your tools** (or, in this case, your functions).
 
-### Miscellaneous Pitfalls
+### 2.4. Miscellaneous Pitfalls
+
+!!! quote ""
 
 While working on Linux Mint, I spent an embarrassingly long time trying to capture kernel panic logs. After a lot of head-scratching, I finally came across [this discussion](https://forum.linuxfoundation.org/discussion/868772/how-to-capture-the-panic-message) on the LFX Mentorship forum.
 
 Moral of the story: **refer to the forum. If you're facing an issue, chances are, someone else already has** (insert apes_together_strong.jpg).
 
-## Office Hours
+## 3. Office Hours
 
-!!! quote ""
+!!! note ""
 
 The program runs in both summer and fall, and is led by Shuah Khan along with one or more co-mentors. For the summer cohort, you can choose between a part-time, six-month option or a full-time, three-month option. For the fall cohort, however, it's strictly full-time.
 
@@ -100,41 +108,47 @@ The program itself is fairly hands-off, with a weekly one-hour guidance and doub
 - If you lack the necessary conditions for testing (such as missing hardware), it's better not to attempt that particular issue.
 - Learn how to write good commit messages. Focus on _what is fixed_ and _why it's fixed in that way_, rather than just _what was changed_.
 
-## Choices
+## 4. Choices
 
-!!! quote ""
+!!! note ""
 
-As mentioned above, it's recommended to choose the subsystems you want to contribute to. You can refer to the subsystem APIs section in the kernel documentation to decide which areas interest you. When working with kernel code, you need to be careful, any accepted change will eventually be rolled out to millions of devices. As a result, code changes require a very rigorous level of testing.
+<span class="sidenote">
+    <span class="side-id">10.</span> [Subsystem APIs](https://docs.kernel.org/subsystem-apis.html)
+</span>
+As mentioned above, it's recommended to choose the subsystems you want to contribute to. You can refer to the subsystem APIs<sup class="side-ref">10</sup> section in the kernel documentation to decide which areas interest you. When working with kernel code, you need to be careful, any accepted change will eventually be rolled out to millions of devices. As a result, code changes require a very rigorous level of testing.
 
-Considering the time I had available while balancing academic exams, interviews, and other commitments, I decided to contribute to documentation for now, with plans to return to code contributions once I have more time. Fortunately, the kernel provides several useful scripts to help with the Documentation Patches. I initially started by using available spellcheck tools to detect spelling errors and sending spell-fix patches. While these don't count toward the mentorship, they did help me get comfortable with the patch submission process.
+<span class="sidenote">
+    <span class="side-id">11.</span> [Dev Tools Available](https://www.kernel.org/doc/html/latest/dev-tools/index.html)
+</span>
+Considering the time I had available while balancing academic exams, interviews, and other commitments, I decided to contribute to documentation for now, with plans to return to code contributions once I have more time. Fortunately, the kernel provides several useful scripts<sup class="side-ref">11</sup> to help with the Documentation Patches. I initially started by using available spellcheck tools to detect spelling errors and sending spell-fix patches. While these don't count toward the mentorship, they did help me get comfortable with the patch submission process.
 
 I later used `make refcheckdocs` to find dead links in the documentation. Once I found one, I checked lore to identify the exact commit that introduced the issue (the commit hash should be referenced when submitting the patch). This often helped me locate the correct link, since in most cases files are renamed or moved rather than deleted outright. The fix itself is usually straightforward, but such issues aren't very common.
 
 In the long run, it makes more sense to focus on code patches. I plan to start working on those after my exams. Fortunately for me, gaining experience in storage-related kernel programming should be helpful for my internship in the summer of 2026, so I already have a rough idea of what I want to focus on. I’ll update this blog once I get started.
 
-## Current patch status
+## 5. Current patch status
 
-!!! quote ""
+!!! note ""
 
-### Documentation Patches
+[Patch details available here](https://docs.google.com/spreadsheets/d/1y1ZMSpPL7VhFpu_cnms2MI0Ul3But2EWBv_T3bsXmdY/edit?usp=sharing)
+
+### 5.1. Documentation Patches
 
 - 2 patches applied (one in `linux-next` and another in `docs-next`)
 - 4 patches pending review
 - 1 patch where a duplicate was merged
 - 1 incorrect patch
 
-### Spell-fix
+### 5.2. Spell-fix
 
 - 3 spell-fix patches applied to the main branch
 - 3 spell-fix patches reviewed/acked but not yet applied
 - 6 spell-fix patches where a duplicate patch was already merged
 - 3 spell-fix patches with no response
 
-[Patch details available here](https://docs.google.com/spreadsheets/d/1y1ZMSpPL7VhFpu_cnms2MI0Ul3But2EWBv_T3bsXmdY/edit?usp=sharing)
+## 6. A Note of Thanks
 
-## A Note of Thanks
-
-!!! quote ""
+!!! note ""
 
 I’d like to thank **LFX** for organizing and running the **Linux Kernel Mentorship Program**, and for making an entry point into kernel development more approachable for students and early contributors.
 
@@ -142,9 +156,10 @@ I’m also grateful to **Shuah Khan**, the **co-mentors**, and everyone involved
 
 This program helped demystify a lot of how kernel development actually works, and while I didn’t make as much progress as I initially hoped, it gave me a foundation I plan to build on going forward.
 
-## Profiles
+## 7. Profiles
 
-!!! quote ""
+!!! note ""
 
 - [Github](https://github.com/Soham-Metha)
 - [Linkedin](https://www.linkedin.com/in/soham-metha)
+- [Blog](https://soham-metha.github.io/blog/)
