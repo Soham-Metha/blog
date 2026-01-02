@@ -45,7 +45,7 @@ theme:
         icon: material/lightbulb
         name: Switch to dark mode
   font:
-    text: EnvyCodeR Nerd Font
+    text: Lora
     code: EnvyCodeR Nerd Font Mono
   favicon: assets/placeholder-favicon.png
   icon:
