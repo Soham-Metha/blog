@@ -130,7 +130,7 @@ In the long run, it makes more sense to focus on code patches. I plan to start w
 - 6 spell-fix patches where a duplicate patch was already merged
 - 3 spell-fix patches with no response
 
-[Detailed description available here]()
+[Patch details available here](https://docs.google.com/spreadsheets/d/1y1ZMSpPL7VhFpu_cnms2MI0Ul3But2EWBv_T3bsXmdY/edit?usp=sharing)
 
 ## A Note of Thanks
 
