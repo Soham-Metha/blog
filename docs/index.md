@@ -134,9 +134,9 @@ In the long run, it makes more sense to focus on code patches. I plan to start w
 
 ### 5.1. Documentation Patches
 
-- 2 patches applied (one in `linux-next` and another in `docs-next`)
-- 4 patches pending review
-- 1 patch where a duplicate was merged
+- 5 patches applied (1 in mainline, 3 in `linux-next` and another in `for-mfd-next`)
+- 1 patches pending review
+- 2 patches where a duplicate was merged
 - 1 incorrect patch
 
 ### 5.2. Spell-fix
